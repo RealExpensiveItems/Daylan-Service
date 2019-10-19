@@ -1,0 +1,83 @@
+.items {
+  display: grid | inline-grid;
+}
+
+
+.image {
+  max-width: 150px;
+  /* max-height: 150px; */
+  width: auto;
+  height: 150px;
+}
+
+
+.container {
+  display: flex;
+  text-align: left;
+  width: 100px;
+  padding: 10px;
+}
+
+.title {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: Roboto, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;yo
+  width: 507px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+}
+
+.description {
+  flex: wrap;
+}
+span {
+  display: block;
+  position: relative;
+  margin: 4px 1px;
+
+}
+
+span.name {
+  font-style: normal;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-variant: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  font-size: 12px;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.description:hover {
+  text-decoration: underline;
+}
+
+span.description {
+  font-style: normal;
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-size: 14px;
+}
+
+.stars {
+  margin: 1px;
+  height: 13px;
+  width: auto;
+}
+
+.reviews {
+  display: inline;
+  bottom: 1px;
+}
+
+
+
