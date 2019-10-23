@@ -6,7 +6,82 @@ import Item from './Item.jsx'
 import _ from 'underscore'
 import Media from 'react-media'
 
-// class App extends React.Component {
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      show: [],
+      category: ''
+    }
+
+    this.showImage = this.showImage.bind(this)
+
+  }
+
+  showImage() {
+    axios.get('/products')
+      .then(result => {
+        this.setState({
+          show: result.data
+        })
+      }, console.log(this.state))
+      .catch(err => console.log(err))
+  }
+
+
+  componentDidMount() {
+    this.showImage()
+    this.setState({
+      category: "bag"
+    })
+  }
+
+
+  render() {
+    var item = []
+    for (var i = 0; i < this.state.show.length; i++) {
+      if (this.state.show[i].category === this.state.category) {
+        item.push(this.state.show[i])
+      }
+    }
+
+    var randomItems = _.shuffle(item).splice(0, 6)
+    //var randomItems = _.shuffle(this.state.show).splice(0, 6)
+    return (
+      <div>
+        <Media queries={{ small: { maxWidth: 950 }, smaller: {maxWidth: 700} }}>
+        {matches =>
+          matches.small ? (
+            <div>
+              <h2 className="title">People also viewed</h2>
+              <div className="scroll">
+                <Items items={randomItems.slice(0, 4)} class={"largerImage"}/>
+              </div>
+            </div>
+            ) : (
+            <div>
+              <h2 className="title">People also viewed</h2>
+              <Items items={randomItems} class={"image"}/>
+            </div>
+          )
+        }
+        </Media>
+      </div>
+    )
+  }
+}
+
+  export default App
+
+
+
+
+
+
+  // class App extends React.Component {
 //   constructor(props) {
 //     super(props);
 
@@ -92,65 +167,3 @@ import Media from 'react-media'
   //     </div>
   //   )
   // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  class App extends React.Component {
-    constructor(props) {
-      super(props);
-
-      this.state = {
-        show: [],
-        previous: [],
-        page: 0
-      }
-
-      this.showImage = this.showImage.bind(this)
-
-    }
-
-    showImage() {
-      axios.get('/products')
-        .then(result => {
-          this.setState({
-            show: result.data
-          })
-        }, console.log(this.state))
-        .catch(err => console.log(err))
-    }
-
-    componentDidMount() {
-      this.showImage()
-    }
-
-
-    render() {
-      var randomItems = _.shuffle(this.state.show).splice(0, 5)
-
-      return (
-        <div>
-          <Media queries={{ small: { maxWidth: 599 } }}>
-          {matches =>
-            matches.small ? (
-              <Items items={randomItems.slice(3)}/>
-              ) : (
-                <Items items={randomItems}/>
-            )
-          }
-          </Media>
-        </div>
-      )
-    }
-  }
-
-  export default App

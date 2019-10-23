@@ -14,7 +14,8 @@ var viewedSchema = mongoose.Schema({
   image: String,
   rating: Number,
   price: Number,
-  reviewers: Number
+  reviewers: Number,
+  category: String
 })
 
 var relateds = mongoose.model('relateds', viewedSchema)

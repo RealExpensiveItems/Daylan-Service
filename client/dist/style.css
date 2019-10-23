@@ -49,6 +49,13 @@ main {
   left: 10px;
 }
 
+.largerImage {
+  max-width: 190px;
+  width: auto;
+  height: 180px;
+  left: 10px;
+}
+
 
 .container {
   display: flex;

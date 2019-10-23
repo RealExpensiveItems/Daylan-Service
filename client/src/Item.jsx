@@ -11,7 +11,7 @@ var Item = (props) => {
 
       <main>
       <figure>
-      <img className="image" src={props.item.image}/>
+      <img className={props.class} src={props.item.image}/>
       </figure>
 
       </main>

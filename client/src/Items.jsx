@@ -9,6 +9,7 @@ var Items = (props) => {
       {props.items.map((itemObj) => (
           <Item
           item={itemObj}
+          class={props.class}
           />
         )
       )}
