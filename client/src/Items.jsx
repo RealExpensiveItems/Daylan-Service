@@ -5,7 +5,7 @@ import _ from 'underscore'
 var Items = (props) => {
 
   return (
-    <div className="container">
+    <div className="product-container">
       {props.items.map((itemObj) => (
           <Item
           item={itemObj}

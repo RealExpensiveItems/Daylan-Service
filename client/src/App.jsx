@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   showImage() {
-    axios.get('/products')
+    axios.get('http://localhost:3000/products')
       .then(result => {
         this.setState({
           show: result.data
@@ -74,7 +74,7 @@ class App extends React.Component {
   }
 }
 
-  export default App
+export default App
 
 
 

@@ -16,7 +16,7 @@ var Item = (props) => {
 
       </main>
 
-      <span>
+      <span className="full-product">
         <Reviews rating={props.item.rating} reviewers={props.item.reviewers}/>
       </span>
 

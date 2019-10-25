@@ -57,7 +57,7 @@ main {
 }
 
 
-.container {
+.product-container {
   display: flex;
   text-align: left;
   width: 100px;
@@ -88,14 +88,35 @@ main {
 .description {
   flex: wrap;
 }
-span {
+.full-product {
   display: block;
   position: relative;
   margin: 4px 1px;
 
 }
 
-span.name {
+.name {
+  display: block;
+  position: relative;
+  margin: 4px 1px;
+
+}
+
+.description {
+  display: block;
+  position: relative;
+  margin: 4px 1px;
+
+}
+
+.price {
+  display: block;
+  position: relative;
+  margin: 4px 1px;
+
+}
+
+.name {
   font-style: normal;
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-variant: normal;
@@ -105,7 +126,7 @@ span.name {
   color: #292929;
 }
 
-span.price {
+.price {
   font-style: normal;
   font-family: Roboto Condensed,Roboto,"HelveticaNeue",Helvetica,Arial,sans-serif;
   font-variant: normal;
@@ -121,7 +142,7 @@ span.price {
   text-decoration: underline;
 }
 
-span.description {
+.description {
   font-style: normal;
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-variant: normal;

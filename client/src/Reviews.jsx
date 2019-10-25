@@ -17,7 +17,7 @@ var Reviews = (props) => {
   }
 
   return (
-    <span>
+    <span className="full-product">
       <img className="stars" src={arr[0]} />
       <img className="stars" src={arr[1]} />
       <img className="stars" src={arr[2]} />
