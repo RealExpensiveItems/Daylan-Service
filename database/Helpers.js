@@ -9,6 +9,16 @@ const helpers = {
         callback(null, result)
       }
     })
+  },
+
+  getById: (id, callback) => {
+    relateds.findOne({id: id}, (err, result) => {
+      if (err) {
+        callback(err)
+      } else {
+        callback(null, result)
+      }
+    })
   }
 }
 

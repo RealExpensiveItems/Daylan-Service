@@ -14,11 +14,12 @@ class App extends React.Component {
 
     this.state = {
       show: [],
-      category: ''
+      category: '',
+      relevant: []
     }
 
     this.showImage = this.showImage.bind(this)
-
+    this.getByProductId = this.getByProductId.bind(this)
   }
 
   showImage() {
@@ -32,10 +33,23 @@ class App extends React.Component {
   }
 
 
+  getByProductId(id) {
+    axios.get(`http://localhost:3000/products/${id}`)
+      .then(result => {
+        this.setState({
+          relevant: result.data
+        })
+      }, console.log(this.state.relevant))
+      .catch(err => console.log(err))
+  }
+
+
   componentDidMount() {
+    this.getByProductId(1)
+
     this.showImage()
     this.setState({
-      category: "bag"
+      category: "jacket"
     })
   }
 
@@ -55,14 +69,14 @@ class App extends React.Component {
         <Media queries={{ small: { maxWidth: 950 }, smaller: {maxWidth: 700} }}>
         {matches =>
           matches.small ? (
-            <div>
+            <div className="main-contain">
               <h2 className="title">People also viewed</h2>
               <div className="scroll">
                 <Items items={randomItems.slice(0, 4)} class={"largerImage"}/>
               </div>
             </div>
             ) : (
-            <div>
+            <div className="main-contain">
               <h2 className="title">People also viewed</h2>
               <Items items={randomItems} class={"image"}/>
             </div>
