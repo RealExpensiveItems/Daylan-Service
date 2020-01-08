@@ -15,11 +15,13 @@ class App extends React.Component {
     this.state = {
       show: [],
       category: '',
-      relevant: []
+      relevant: [],
+      ryan: []
     }
 
     this.showImage = this.showImage.bind(this)
-    this.getByProductId = this.getByProductId.bind(this)
+    // this.getByProductId = this.getByProductId.bind(this)
+    //this.getRyans = this.getRyans.bind(this)
   }
 
   showImage() {
@@ -45,8 +47,7 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    this.getByProductId(1)
-
+    // this.getByProductId('jacket')
     this.showImage()
     this.setState({
       category: "jacket"
@@ -63,7 +64,6 @@ class App extends React.Component {
     }
 
     var randomItems = _.shuffle(item).splice(0, 6)
-    //var randomItems = _.shuffle(this.state.show).splice(0, 6)
     return (
       <div>
         <Media queries={{ small: { maxWidth: 950 }, smaller: {maxWidth: 700} }}>
@@ -89,96 +89,3 @@ class App extends React.Component {
 }
 
 export default App
-
-
-
-
-
-
-  // class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {
-//       show: [],
-//       previous: [],
-//       page: 0
-//     }
-
-//     this.showImage = this.showImage.bind(this)
-//     this.incrementPage = this.incrementPage.bind(this)
-//     this.decrementPage = this.decrementPage.bind(this)
-//   }
-
-//   showImage() {
-//     axios.get('/products')
-//       .then(result => {
-//         this.setState({
-//           show: result.data
-//         })
-//       }, console.log(this.state))
-//       .catch(err => console.log(err))
-//   }
-
-//   componentDidMount() {
-//     this.showImage()
-//   }
-
-//   incrementPage(items) {
-//     this.setState({
-//       page: this.state.page + 1,
-//       previous: items
-//     })
-//   }
-
-//   decrementPage() {
-//     this.setState({
-//       page: this.state.page - 2
-//     })
-//   }
-
-
-
-//   render() {
-//     var randomItems = _.shuffle(this.state.show).splice(0, 5)
-
-//     return (
-//       <div>
-//         <h2 className="title">People also viewed</h2>
-
-//         <div className="scroll">
-//           {(this.state.show.length === 0) ?   (<div></div>) : (
-//             <div className="contents">
-//               <Items items={randomItems}/>
-//               <button onClick={() =>   this.incrementPage  (randomItems)}>test this</  button>
-//             </div>
-//           )}
-//         </div>
-
-//       </div>
-//     )
-//   }
-// }
-
-// export default App
-
-
-
-  // if (this.state.page === 1) {
-  //   return (
-  //     <div>
-  //       <Items items={randomItems}/>
-  //       <button onClick={() => this.incrementPage(this.state.previous)}>Go Back</button>
-  //     </div>
-  //   )
-  // }
-
-  // if (this.state.page === 2) {
-  //   return (
-  //     <div>
-  //       <Items items={this.state.previous}/>
-  //       <button onClick={() => this.decrementPage()}>New</button>
-  //     </div>
-  //   )
-  // }
-  //

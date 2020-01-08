@@ -12,7 +12,7 @@ const helpers = {
   },
 
   getById: (id, callback) => {
-    relateds.findOne({id: id}, (err, result) => {
+    relateds.find({id: id}, (err, result) => {
       if (err) {
         callback(err)
       } else {
