@@ -22,6 +22,5 @@ git clone https://github.com/RealExpensiveItems/Daylan-Service.git
 - https://github.com/RealExpensiveItems/Jiyoon-Service.git
 
 ## Additional Work
-
-### Created Sign in module in 
--https://github.com/RealExpensiveItems/navbar
+Created Sign in component in following repository:
+- https://github.com/RealExpensiveItems/navbar
