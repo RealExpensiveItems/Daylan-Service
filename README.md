@@ -5,7 +5,7 @@ Recreation of REI People Also Viewed module
 You will need Node.js version 8.0 or greater installed on your system.
 
 ## Installation & Setup
-Get the code by cloning this repository using git
+Get the code by cloning this repository using -
 git clone https://github.com/RealExpensiveItems/Daylan-Service.git
 
 
