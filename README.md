@@ -20,3 +20,8 @@ git clone https://github.com/RealExpensiveItems/Daylan-Service.git
 - https://github.com/RealExpensiveItems/REI-module-Forest
 - https://github.com/RealExpensiveItems/ryansmodule
 - https://github.com/RealExpensiveItems/Jiyoon-Service.git
+
+## Additional Work
+
+###Created Sign in module in 
+-https://github.com/RealExpensiveItems/navbar
