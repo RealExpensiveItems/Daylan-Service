@@ -15,8 +15,8 @@ git clone https://github.com/RealExpensiveItems/Daylan-Service.git
 3. Start webpack - npm run build
 
 
-# Related Projects
-https://github.com/RealExpensiveItems/navbar
-https://github.com/RealExpensiveItems/REI-module-Forest
-https://github.com/RealExpensiveItems/ryansmodule
-https://github.com/RealExpensiveItems/Jiyoon-Service.git
+## Related Projects
+- https://github.com/RealExpensiveItems/navbar
+- https://github.com/RealExpensiveItems/REI-module-Forest
+- https://github.com/RealExpensiveItems/ryansmodule
+- https://github.com/RealExpensiveItems/Jiyoon-Service.git
